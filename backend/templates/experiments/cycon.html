@@ -195,10 +195,10 @@
             <h4 class="mb-2 max-w-xs font-medium flex flex-row">
                 <span class="mr-2">Project Name</span>
                 <div class="flex flex-row">
-                    <div class="popup flex flex-row space-x-2" onclick="popupInformation('Experiment_Name_Info')">
+                    <!-- <div class="popup flex flex-row space-x-2" onclick="popupInformation('Experiment_Name_Info')">
                         <img src="../../static/Images/information_icon.png" class="popup" width="20" height="20" />
                         <span class="popuptext" id="Experiment_Name_Info"> Define the purpose or objective of your project.</span>
-                    </div>
+                    </div> -->
 
             </h4>
             <!-- information to display for the name of the project -->
@@ -215,10 +215,10 @@
                     <h3 class="mb-2 font-medium mr-2">Goal and Scope</h3>
                     <!-- information to display for the definition of the project -->
                     <div class="popup" onclick="popupInformation('Experiment_Definition_Info')">
-                        <img src="../../static/Images/information_icon.png" width="20" height="20" />
+                        <!-- <img src="../../static/Images/information_icon.png" width="20" height="20" />
                         <span class="popuptext" id="Experiment_Definition_Info">Define the purpose and boundaries of
                             your project.
-                        </span>
+                        </span> -->
                     </div>
                 </div>
 
@@ -250,10 +250,10 @@
                         <h3 class="mr-2">File </h3>
                         <!-- information to display for the loadable dataset -->
                         <div class="popup" onclick="popupInformation('Experiment_Dataset_Info')">
-                            <img src="../../static/Images/information_icon.png" width="20" height="20" />
+                            <!-- <img src="../../static/Images/information_icon.png" width="20" height="20" />
                             <span class="popuptext" id="Experiment_Dataset_Info">
                             Upload or choose your CSV file
-                            </span>
+                            </span> -->
                         </div>
                     </div>
 
@@ -303,7 +303,7 @@
                     <label>Kernel Density Estimates (KDE) ind value. (optional)</label>
                     <div class="popup" onclick="popupInformation('KDE_IND_Info')">
                         <img src="../../static/Images/information_icon.png" width="20" height="20" />
-                        <span style="" class="popuptext" id="KDE_IND_Info">A KDE plot visualizes data distribution using a continuous probability density curve, similar to a histogram.</span>
+                        <span style="" class="popuptext" id="KDE_IND_Info">A KDE plot visualizes data distribution using a continuous probability density curve, similar to a histogram.<br> The ind parameter specifies the number of points at which the estimated density function should be evaluated.</span>
                         <!-- <span style="white-space: pre-wrap" class="popuptext" id="KDE_IND_Info">A kernel density
                             estimate (KDE) plot is a method for visualizing the distribution of observations in a
                             dataset, analogous to a histogram. KDE represents the data using a continuous probability
@@ -397,7 +397,7 @@
 
         <!-- Preprocess section-->
         <div class="border-b border-gray-400 p-2">
-            <h1 class="mb-2 font-bold text-xl">Method</h1>
+            <h1 class="mb-2 font-bold text-xl"> Method </h1>
             <form id="methodologyForm">
 
                 <!-- Methodology section 1 -->
@@ -767,6 +767,9 @@
                             <input type="checkbox" id=Met_davies name="Met_davies" value=Met_davies> <label
                                 for=Met_davies>Davies</label>
                         </div><br>
+                        <hr>
+                        <p>Requires ground truth label</p>
+                        <hr>
                         <div class="border border-gray-300 rounded-md shadow-sm p-2 mb-1 inline-block ml-1">
                             <input type="checkbox" id=Met_ari name="Met_ari" value=Met_ari> <label
                                 for=Met_ari>Ari</label>

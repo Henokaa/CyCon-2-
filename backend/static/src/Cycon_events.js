@@ -1062,20 +1062,20 @@ function getData(files, fileSelected, choice) {
                         }
 
                         if (document.getElementById('Met_WEIGHT1').checked){
-                            writeData.paragraph += '<span id="Met_WEIGHT_Data1" class="Met_WEIGHT_Data"><b>Weights: </b>' + Results["weights"] + '<br\>' + '</span>'
+                            writeData.paragraph += '<span id="Met_WEIGHT_Data1" class="Met_WEIGHT_Data1"><b>Weights: </b>' + Results["weights"] + '<br\>' + '</span>'
                             
                             }
                         else if (!document.getElementById('Met_WEIGHT1').checked) {
-                            writeData.paragraph += '<span id="Met_WEIGHT_Data1" class="Met_WEIGHT_Data" style="visibility: hidden; position: fixed;">' + "Weights:" + Results["weights"] + '<br\>' + '</span>'
+                            writeData.paragraph += '<span id="Met_WEIGHT_Data1" class="Met_WEIGHT_Data1" style="visibility: hidden; position: fixed;">' + "Weights:" + Results["weights"] + '<br\>' + '</span>'
                         }
 
 
                         if (document.getElementById('Met_WEIGHT2').checked){
-                            writeData.paragraph += '<span id="Met_WEIGHT_Data2" class="Met_WEIGHT_Data"><b>Weights: </b>' + Results["weights"] + '<br\>' + '</span>'
+                            writeData.paragraph += '<span id="Met_WEIGHT_Data2" class="Met_WEIGHT_Data2"><b>Weights: </b>' + Results["weights"] + '<br\>' + '</span>'
                             
                             }
                         else if (!document.getElementById('Met_WEIGHT2').checked) {
-                            writeData.paragraph += '<span id="Met_WEIGHT_Data2" class="Met_WEIGHT_Data" style="visibility: hidden; position: fixed;">' + "Weights:" + Results["weights"] + '<br\>' + '</span>'
+                            writeData.paragraph += '<span id="Met_WEIGHT_Data2" class="Met_WEIGHT_Data2" style="visibility: hidden; position: fixed;">' + "Weights:" + Results["weights"] + '<br\>' + '</span>'
                         }
 
 
@@ -1187,49 +1187,49 @@ function getData(files, fileSelected, choice) {
                         // Clustering
 
                         if (document.getElementById('Met_silhouette').checked){
-                            writeData.paragraph += '<span id="Met_silhouette_Data" class="Met_silhouette_Data">' + '<strong>Silhouette:</strong>'+ Results["silhouette"] + "<br\>" + '</span>'
+                            writeData.paragraph += '<span id="Met_silhouette_Data" class="Met_silhouette_Data">' + '<strong>Silhouette: </strong>'+ Results["silhouette"] + "<br\>" + '</span>'
                         }
                         else if (!document.getElementById('Met_silhouette').checked){
-                            writeData.paragraph += '<span id="Met_silhouette_Data" class="Met_silhouette_Data" style="visibility: hidden; position: fixed;">' + '<strong>Silhouette:</strong>' + Results["silhouette"] + "<br\>" + '</span>'
+                            writeData.paragraph += '<span id="Met_silhouette_Data" class="Met_silhouette_Data" style="visibility: hidden; position: fixed;">' + '<strong>Silhouette: </strong>' + Results["silhouette"] + "<br\>" + '</span>'
                         }
 
 
                         if (document.getElementById('Met_calinski').checked){
-                            writeData.paragraph += '<span id="Met_calinski_Data" class="Met_calinski_Data">' + '<strong>Calinski:</strong>'+ Results["calinski"] + "<br\>" + '</span>'
+                            writeData.paragraph += '<span id="Met_calinski_Data" class="Met_calinski_Data">' + '<strong>Calinski: </strong>'+ Results["calinski"] + "<br\>" + '</span>'
                         }
                         else if (!document.getElementById('Met_calinski').checked){
-                            writeData.paragraph += '<span id="Met_calinski_Data" class="Met_calinski_Data" style="visibility: hidden; position: fixed;">' + '<strong>Calinski:</strong>' + Results["calinski"] + "<br\>" + '</span>'
+                            writeData.paragraph += '<span id="Met_calinski_Data" class="Met_calinski_Data" style="visibility: hidden; position: fixed;">' + '<strong>Calinski: </strong>' + Results["calinski"] + "<br\>" + '</span>'
                         }
 
                         if (document.getElementById('Met_davies').checked){
-                            writeData.paragraph += '<span id="Met_davies_Data" class="Met_davies_Data">' + '<strong>Davies:</strong>'+ Results["davies"] + "<br\>" + '</span>'
+                            writeData.paragraph += '<span id="Met_davies_Data" class="Met_davies_Data">' + '<strong>Davies: </strong>'+ Results["davies"] + "<br\>" + '</span>'
                         }
                         else if (!document.getElementById('Met_davies').checked){
-                            writeData.paragraph += '<span id="Met_davies_Data" class="Met_davies_Data" style="visibility: hidden; position: fixed;">' + '<strong>Davies:</strong>' + Results["davies"] + "<br\>" + '</span>'
+                            writeData.paragraph += '<span id="Met_davies_Data" class="Met_davies_Data" style="visibility: hidden; position: fixed;">' + '<strong>Davies: </strong>' + Results["davies"] + "<br\>" + '</span>'
                         }
 
-
+                        // writeData.paragraph += '<hr><p>Requires ground truth label</p><hr>'
                         if (document.getElementById('Met_ari').checked){
-                            writeData.paragraph += '<span id="Met_ari_Data" class="Met_ari_Data">' + '<strong>Ari:</strong>'+ Results["ari"] + "<br\>" + '</span>'
+                            writeData.paragraph += '<span id="Met_ari_Data" class="Met_ari_Data">' + '<strong>Ari: </strong>'+ Results["ari"] + "<br\>" + '</span>'
                         }
                         else if (!document.getElementById('Met_ari').checked){
-                            writeData.paragraph += '<span id="Met_ari_Data" class="Met_ari_Data" style="visibility: hidden; position: fixed;">' + '<strong>Ari:</strong>' + Results["ari"] + "<br\>" + '</span>'
+                            writeData.paragraph += '<span id="Met_ari_Data" class="Met_ari_Data" style="visibility: hidden; position: fixed;">' + '<strong>Ari: </strong>' + Results["ari"] + "<br\>" + '</span>'
                         }
                         
 
                         if (document.getElementById('Met_homogeneity').checked){
-                            writeData.paragraph += '<span id="Met_homogeneity_Data" class="Met_homogeneity_Data">' + '<strong>Homogeneity:</strong>'+ Results["homogeneity"] + "<br\>" + '</span>'
+                            writeData.paragraph += '<span id="Met_homogeneity_Data" class="Met_homogeneity_Data">' + '<strong>Homogeneity: </strong>'+ Results["homogeneity"] + "<br\>" + '</span>'
                         }
                         else if (!document.getElementById('Met_homogeneity').checked){
-                            writeData.paragraph += '<span id="Met_homogeneity_Data" class="Met_homogeneity_Data" style="visibility: hidden; position: fixed;">' + '<strong>Homogeneity:</strong>' + Results["homogeneity"] + "<br\>" + '</span>'
+                            writeData.paragraph += '<span id="Met_homogeneity_Data" class="Met_homogeneity_Data" style="visibility: hidden; position: fixed;">' + '<strong>Homogeneity: </strong>' + Results["homogeneity"] + "<br\>" + '</span>'
                         }
 
 
                         if (document.getElementById('Met_v_measure').checked){
-                            writeData.paragraph += '<span id="Met_v_measure_Data" class="Met_v_measure_Data">' + '<strong>V_measure:</strong>'+ Results["v_measure"] + "<br\>" + '</span>'
+                            writeData.paragraph += '<span id="Met_v_measure_Data" class="Met_v_measure_Data">' + '<strong>V_measure: </strong>'+ Results["v_measure"] + "<br\>" + '</span>'
                         }
                         else if (!document.getElementById('Met_v_measure').checked){
-                            writeData.paragraph += '<span id="Met_v_measure_Data" class="Met_v_measure_Data" style="visibility: hidden; position: fixed;">' + '<strong>V_measure:</strong>' + Results["v_measure"] + "<br\>" + '</span>'
+                            writeData.paragraph += '<span id="Met_v_measure_Data" class="Met_v_measure_Data" style="visibility: hidden; position: fixed;">' + '<strong>V_measure: </strong>' + Results["v_measure"] + "<br\>" + '</span>'
                         }
                         //$('#Results').html(data.paragraph);
                         document.getElementById("Results").innerHTML = writeData.paragraph;
@@ -1996,9 +1996,8 @@ function generatePDF(form) {
           pdf.setFontSize(10);
           pdf.setTextColor(150);
           // Add your footer content here
-          pdf.text("Copyright © CyCon 2024 version. Last updated: 04/24/2024", pdf.internal.pageSize.getWidth() - 100, pdf.internal.pageSize.getHeight() - 10);
+          pdf.text("Copyright © CyCon 2024 version. Last updated: 05/1/2024", pdf.internal.pageSize.getWidth() - 100, pdf.internal.pageSize.getHeight() - 10);
         }
-  
         // Save the PDF with the footer
         pdf.save();
       });
