@@ -1,7 +1,7 @@
 version: "3.9"
 services:
   db:
-    image: "mysql:8.0"
+    image: "mysql:8"
     command: '--default-authentication-plugin=caching_sha2_password'
     restart: always
     healthcheck:
