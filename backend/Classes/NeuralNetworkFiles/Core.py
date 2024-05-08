@@ -19,15 +19,15 @@ def getCore():
 ## Input
 Name = "Input"
 Display_Name = "Input"
-Definition = ["Input() is used to instantiate a Keras tensor.\n\nA Keras tensor is a symbolic tensor-like object, which we augment with certain attributes that allow us to build a Keras model just by knowing the inputs and outputs of the model.\n\nFor instance, if a, b and c are Keras tensors, it becomes possible to do: model = Model(input=[a, b], output=c)"]
+Definition = ["Input() is used to instantiate a Keras tensor.\nA Keras tensor is a symbolic tensor-like object, which we augment with certain attributes that allow us to build a Keras model just by knowing the inputs and outputs of the model.\n\nFor instance, if a, b and c are Keras tensors, it becomes possible to do: model = Model(input=[a, b], output=c)"]
 Parameter_0 = {"Name":"shape_x", "Type": ["int"], "Default_option":"", "Default_value":"", "Possible":["int"],
-             "Definition":"First axis of the shape of the input to the neural network.\n\nA shape tuple (integers), not including the batch size. For instance, shape=(32,) indicates that the expected input will be batches of 32-dimensional vectors. Elements of this tuple can be None; 'None' elements represent dimensions where the shape is not known."}
+             "Definition":"First axis of the shape of the input to the neural network.\nA shape tuple (integers), not including the batch size. For instance, shape=(32,) indicates that the expected input will be batches of 32-dimensional vectors. Elements of this tuple can be None; 'None' elements represent dimensions where the shape is not known."}
 Parameter_1 = {"Name":"shape_y", "Type": ["int"], "Default_option":"", "Default_value":"", "Possible":["int"],
-             "Definition":"Second axis of the shape of the input to the neural network.\n\nA shape tuple (integers), not including the batch size. For instance, shape=(32,) indicates that the expected input will be batches of 32-dimensional vectors. Elements of this tuple can be None; 'None' elements represent dimensions where the shape is not known."}
+             "Definition":"Second axis shape of the input to the neural network.\n"}
 Parameter_2 = {"Name":"shape_z", "Type": ["int"], "Default_option":"", "Default_value":"", "Possible":["int"],
-             "Definition":"Third axis of the shape of the input to the neural network.\n\nA shape tuple (integers), not including the batch size. For instance, shape=(32,) indicates that the expected input will be batches of 32-dimensional vectors. Elements of this tuple can be None; 'None' elements represent dimensions where the shape is not known."}
+             "Definition":"Third axis of the shape of the input to the neural network.\n"}
 Parameter_3 = {"Name":"shape_w", "Type": ["int"], "Default_option":"", "Default_value":"", "Possible":["int"],
-             "Definition":"Fourth axis of the shape of the input to the neural network.\n\nA shape tuple (integers), not including the batch size. For instance, shape=(32,) indicates that the expected input will be batches of 32-dimensional vectors. Elements of this tuple can be None; 'None' elements represent dimensions where the shape is not known."}
+             "Definition":"Fourth axis of the shape of the input to the neural network.\n"}
 Parameter_4 = {"Name":"batch_size", "Type": ["int"], "Default_option":"", "Default_value":"", "Possible":["int"],
              "Definition":"optional static batch size (integer)."}
 Parameter_5 = {"Name":"name", "Type": ["str"], "Default_option":"", "Default_value":"", "Possible":["string"],
@@ -40,7 +40,7 @@ Parameter_7 = {"Name":"sparse", "Type": ["bool"], "Default_option":"None", "Defa
 #Parameter_0 = {"Name":"tensor", "Type": ["int"], "Default_option":"", "Default_value":"", "Possible":["int"],
 #             "Definition":"Optional existing tensor to wrap into the Input layer. If set, the layer will use the tf.TypeSpec of this tensor rather than creating a new placeholder tensor."}
 Parameter_8 = {"Name":"ragged", "Type": ["bool"], "Default_option":"None", "Default_value":"None", "Possible":[True,False,"None"],
-             "Definition":" A boolean specifying whether the placeholder to be created is ragged. Only one of 'ragged' and 'sparse' can be True. In this case, values of 'None' in the 'shape' argument represent ragged dimensions. For more information about RaggedTensors, see this guide."}
+             "Definition":"A boolean specifying whether the placeholder to be created is ragged. Only one of 'ragged' and 'sparse' can be True. In this case, values of 'None' in the 'shape' argument represent ragged dimensions."}
 ## Removed as we are not allowing user to create an object place holder then select to use.
 #Parameter_0 = {"Name":"type_spec", "Type": ["int"], "Default_option":"", "Default_value":"", "Possible":["int"],
 #             "Definition":"A tf.TypeSpec object to create the input placeholder from. When provided, all other args except name must be None."}
@@ -101,9 +101,9 @@ Name = "Embedding"
 Display_Name = "Embedding"
 Definition = ["Turns positive integers (indexes) into dense vectors of fixed size.\n\ne.g. [[4], [20]] -> [[0.25, 0.1], [0.6, -0.2]]\n\nThis layer can only be used on positive integer inputs of a fixed range. The tf.keras.layers.TextVectorization, tf.keras.layers.StringLookup, and tf.keras.layers.IntegerLookup preprocessing layers can help prepare inputs for an Embedding layer.\n\nThis layer accepts tf.Tensor, tf.RaggedTensor and tf.SparseTensor input."]
 Parameter_0 = {"Name":"input_dim", "Type": ["int"], "Default_option":"", "Default_value":"", "Possible":["int"],
-             "Definition":"Integer. Size of the vocabulary, i.e. maximum integer index + 1."}
+             "Definition":"Integer value. Size of the vocabulary, i.e. maximum integer index + 1."}
 Parameter_1 = {"Name":"output_dim", "Type": ["int"], "Default_option":"", "Default_value":"", "Possible":["int"],
-             "Definition":"Integer. Dimension of the dense embedding."}
+             "Definition":"Integer value. Dimension of the dense embedding."}
 Parameter_2 = {"Name":"embeddings_initializer","Type": ["option"], "Default_option":"uniform", "Default_value":"uniform", "Possible":Layer.getInitializers(),
              "Definition":"Initializer for the embeddings matrix (see keras.initializers)."}
 Parameter_3 = {"Name":"embeddings_regularizer", "Type": ["option"], "Default_option":"None", "Default_value":"None", "Possible":Layer.getRegularizers(),

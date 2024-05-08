@@ -13,6 +13,7 @@ from pathlib import Path
 from werkzeug.utils import secure_filename
 
 from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score
+from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 
 from sklearn.metrics import ConfusionMatrixDisplay
 from sklearn.metrics import confusion_matrix
@@ -82,6 +83,11 @@ def Split(data):
         y_test = np.argmax(y_test, axis = 1)
 
         labels = np.unique(y_test)
+
+        mse = "This is for regression"
+        rmse = "This is for regression"
+        mae = "This is for regression"
+        r2 = "This is for regression"
         
         # Obtain the Metrics
         Accuracy = accuracy_score(y_test, y_pred)
@@ -94,6 +100,12 @@ def Split(data):
         Recall = recall_score(y_test, y_pred, average=None)
         Recall_micro = recall_score(y_test, y_pred, average='micro')
         Recall_macro = recall_score(y_test, y_pred, average='macro')
+
+        # Regression metrics
+        mse = mean_squared_error(y_test, y_pred)
+        rmse = np.sqrt(mse)
+        mae = mean_absolute_error(y_test, y_pred)
+        r2 = r2_score(y_test, y_pred)
       
         # Create confusion matrix
         confusion_matrix(y_test, y_pred)
@@ -162,6 +174,12 @@ def Split(data):
                     "Recall_micro": Recall_micro,
                     "Recall_macro": Recall_macro,
 
+                    "MSE": mse,
+                    "RMSE": rmse,
+                    "MAE": mae,
+                    "r2": r2,
+
+                    
                     "cm_overall": cm_graph,
                     "acc_history": acc_graph,
                     "loss_history": loss_graph,

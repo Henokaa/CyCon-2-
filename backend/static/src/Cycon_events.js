@@ -1680,6 +1680,38 @@ function getData(files, fileSelected, choice) {
                             }
                         
 
+                        // Regression
+                            if (document.getElementById('Met_MSE').checked){
+                                writeData.paragraph += '<span id="Met_MSE_Data" class="Met_MSE_Data"><b>Mean Squared Error: </b>' + Results["MSE"] + '<br\>' + '</span>'
+                                
+                                }
+                            else if (!document.getElementById('Met_MSE').checked) {
+                                writeData.paragraph += '<span id="Met_MSE_Data" class="Met_MSE_Data" style="visibility: hidden; position: fixed;">' + "Mean Squared Error:" + Results["MSE"] + '<br\>' + '</span>'
+                            }
+    
+                            if (document.getElementById('Met_RMSE').checked){
+                                writeData.paragraph += '<span id="Met_RMSE_Data" class="Met_RMSE_Data"><b>Root Mean Squared Error: </b>' + Results["RMSE"] + '<br\>' + '</span>'
+                                
+                                }
+                            else if (!document.getElementById('Met_RMSE').checked) {
+                                writeData.paragraph += '<span id="Met_RMSE_Data" class="Met_RMSE_Data" style="visibility: hidden; position: fixed;">' + "Root Mean Squared Error:" + Results["RMSE"] + '<br\>' + '</span>'
+                            }
+    
+                            if (document.getElementById('Met_MAE').checked){
+                                writeData.paragraph += '<span id="Met_MAE_Data" class="Met_MAE_Data"><b>Mean Absolute Error:</b>' + Results["MAE"] + '<br\>' + '</span>'
+                                
+                                }
+                            else if (!document.getElementById('Met_MAE').checked) {
+                                writeData.paragraph += '<span id="Met_MAE_Data" class="Met_MAE_Data" style="visibility: hidden; position: fixed;">' + "Mean Absolute Error:" + Results["MAE"] + '<br\>' + '</span>'
+                            }
+    
+                            if (document.getElementById('Met_R2').checked){
+                                writeData.paragraph += '<span id="Met_R2_Data" class="Met_R2_Data"><b>R-squared Score:</b>' + Results["r2"] + '<br\>' + '</span>'
+                                
+                                }
+                            else if (!document.getElementById('Met_R2').checked) {
+                                writeData.paragraph += '<span id=Met_R2_Data" class=Met_R2_Data" style="visibility: hidden; position: fixed;">' + '<strong>R-squared Score:</strong>' + Results["r2"] + '<br\>' + '</span>'
+                            }
 
                             // var img = new Image();
                             // img.src = 'data:image/jpeg;base64,' + Results['cm_overall'];
