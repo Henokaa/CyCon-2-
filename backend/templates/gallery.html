@@ -1,34 +1,100 @@
 {% extends "layout.html" %} {% block content %}
-<div class="grid grid-cols-2 md:grid-cols-3 gap-4" style="margin: 15px;">
+<div class="faq">
+    <div class="faq-item" x-data="{ open: true }">
+        <div class="faq-question flex items-center justify-between cursor-pointer" @click="open = !open">
+            <h3 class="mr-2">Year 2023</h3>
+            <span class="toggle-icon" x-text="open ? '-' : '+'"></span>
+        </div>
+        <div class="faq-answer" x-show="open">
+            <!-- Content for Year 1 -->
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4" style="margin: 15px;">
+                <div>
+                    <img class="h-auto max-w-full rounded-lg" src="../static/Images/Gallery(4).jpg" alt="">
+                    <h1 style="margin-top: 10px;">"2023 NSF Cybertraining Principal Investigator Meeting, September 26 -
+                        27, 2023, Houston, TX"
+                        <a href="https://cybertrainingpi.wixsite.com/meeting2023"
+                            style="color: blue;">https://cybertrainingpi.wixsite.com/meeting2023</a>
+                    </h1>
+                    <!-- <h1>
+                        Attribution
+                    </h1> -->
+
+                </div>
+                <div>
+                    <img class="h-auto max-w-full rounded-lg" src="../static/Images/Gallery(5).jpg" alt="">
+                </div>
+            </div>
+            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
+        </div>
+    </div>
+
+    <div class="faq-item" x-data="{ open: false }">
+        <div class="faq-question flex items-center justify-between cursor-pointer" @click="open = !open">
+            <h3 class="mr-2">Year 2024</h3>
+            <span class="toggle-icon" x-text="open ? '-' : '+'"></span>
+        </div>
+        <div class="faq-answer" x-show="open">
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4" style="margin: 15px;">
+                <div style="display: flex; flex-direction: column; justify-content: flex-end;">
+                    <img class="h-auto max-w-full rounded-lg" src="../static/Images/Gallery(6).jpg" alt="" style="">
+                    <h1 style="margin-top: 10px;">"NSF EPSCoR Workshop on Intelligent Manufacturing for Extreme
+                        Environments," May 2-3, Idaho Falls, ID
+                        Link:
+                        <a href="https://cybertrainingpi.wixsite.com/meeting2023"
+                            style="color: blue;">https://imee2024.org/</a>
+                    </h1>
+                    <!-- <h1>
+                        Attribution
+                    </h1> -->
+
+                </div>
+                <div>
+                    <!-- <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg" alt=""> -->
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="faq-item" x-data="{ open: false }">
+        <div class="faq-question flex items-center justify-between cursor-pointer" @click="open = !open">
+            <h3 class="mr-2">Year 3</h3>
+            <span class="toggle-icon" x-text="open ? '-' : '+'"></span>
+        </div>
+        <div class="faq-answer" x-show="open">
+        
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+        </div>
+    </div> -->
+
+    <!-- Add more faq-items for each year in your timeline -->
+</div>
+
+<!-- <div class="grid grid-cols-2 md:grid-cols-3 gap-4" style="margin: 15px;">
     <div>
-        <img class="h-auto max-w-full rounded-lg" src="../static/Images/Gallery(1).jpg" alt="">
+        <img class="h-auto max-w-full rounded-lg" src="../static/Images/Gallery(4).jpg" alt="">
         <h1 style="margin-top: 10px;">"2023 NSF Cybertraining Principal Investigator Meeting, September 26 - 27, 2023, Houston, TX"
             <a href="https://cybertrainingpi.wixsite.com/meeting2023" style="color: blue;">https://cybertrainingpi.wixsite.com/meeting2023</a>
             </h1>
-            <!-- <h1>
-                Attribution
-            </h1> -->
               
     </div>
     <div>
-        <img class="h-auto max-w-full rounded-lg" src="../static/Images/Gallery(2).jpg" alt="">
+        <img class="h-auto max-w-full rounded-lg" src="../static/Images/Gallery(5).jpg" alt="">
     </div>
 
     <div style="display: flex; flex-direction: column; justify-content: flex-end;">
-        <img class="h-auto max-w-full rounded-lg" src="../static/Images/Gallery(3).jpeg" alt="" style="width: 100%; height: auto;">
+        <img class="h-auto max-w-full rounded-lg" src="../static/Images/Gallery(6).jpg" alt="" style="">
         <h1 style="margin-top: 10px;">"NSF EPSCoR Workshop on Intelligent Manufacturing for Extreme Environments," May 2-3, Idaho Falls, ID
             Link:
             <a href="https://cybertrainingpi.wixsite.com/meeting2023" style="color: blue;">https://imee2024.org/</a>
             </h1>
-            <!-- <h1>
-                Attribution
-            </h1> -->
               
-    </div>
-    <div>
-        <!-- <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg" alt=""> -->
-    </div>
-    <!-- <div>
+    </div> -->
+<!-- <div> -->
+<!-- <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg" alt="">  -->
+<!-- </div> -->
+<!-- <div>
         <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg" alt="">
     </div>
     <div>
@@ -55,5 +121,5 @@
     <div>
         <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-11.jpg" alt="">
     </div> -->
-</div>
+<!-- </div> -->
 {% endblock %}
